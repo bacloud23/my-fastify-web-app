@@ -1,0 +1,32 @@
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<% if (typeof meta != 'undefined') { %>
+<meta name="description" content="<%= meta %>">
+<% } %>
+
+<script src="https://kit.fontawesome.com/6c4c781788.js" crossorigin="anonymous"></script>
+
+
+<% if (typeof title != 'undefined') { %>
+<title><%= title %></title>
+<% } else { %>
+<title>Friendly secrets</title>
+<% } %>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="/stylesheets/base.css">
+
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=News+Cycle" />
+<script>
+  var __errors__ = []
+  var __successes__ = []
+  var __announcements__ = []
+  var __urls__ = []
+</script>
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48x48.png">
+

@@ -1,0 +1,61 @@
+<% if(typeof announcement!=='undefined'){ %>
+<div class="announcement">
+  <p>Announcement Here!<%= announcement %></p>
+</div>
+<% }%>
+<header class="p-3 bg-dark text-white">
+  <div class="container-fluid">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <img src="/images/favicon-48x48.png" height="32" alt="Friendly-Secrets">
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li>
+          <a data-trans="(categories)" href="/categories" class="nav-link px-2 text-secondary">Categories</a>
+        </li>
+        <li class="<%= typeof(section)!== 'undefined' && section === 'Page1' && section %>">
+          <a data-trans="(Page1)" href="/secrets/Page1" class="nav-link px-2 text-white">Page1</a>
+        </li>
+        <li class="<%= typeof(section)!== 'undefined' && section === 'Page2' && section %>">
+          <a data-trans="(Page2)" href="/secrets/Page2" class="nav-link px-2 text-white">Page2</a>
+        </li>
+        <li class="<%= typeof(section)!== 'undefined' && section === 'Page3' && section %>">
+          <a data-trans="(Page3)" href="/secrets/Page3" class="nav-link px-2 text-white">Page3</a>
+        </li>
+        <li class="<%= typeof(section)!== 'undefined' && section === 'Page4' && section %>">
+          <a data-trans="(Page4)" href="/secrets/Page4" class="nav-link px-2 text-white">Page4</a>
+        </li>
+        <li class="external"><a data-trans="(so-c)" href="/u/" class="nav-link px-2 text-white">Digital card</a></li>
+        <li class="external"><a data-trans="(weather)" href="/wv/" class="nav-link px-2 text-white">Weather</a></li>
+      </ul>
+
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input id="autoComplete" class="form-control form-control-dark text-white bg-dark" type="search" spellcheck=false autocomplete="off" placeholder="Quick search...">
+      </form>
+
+      <div class="text-end">
+        <% if(typeof user!=='undefined'){ %>
+          <% if(typeof user.nickname==='undefined' || user.nickname==='' ){ %>
+          <a class="btn btn-outline-light me-2" href="/login">Login</a>
+          <a class="btn btn-warning" href="/signup">Sign-up</a>
+          <% } else { %>
+          <a href="/secrets/user"><span class="fa fa-user">&#8203;</span> Welcome <%= user.nickname %></a>
+          <a href="/secrets/user/notifications"><span class="fa fa-bell">&#8203;</span> Notifications</a>
+          <a class="btn btn-outline-light me-2" href="/logout">Logout</a>
+          <% }%>
+        <% }%>
+      </div>
+      <ul class="nav float-end">
+        <li class="nav-item px-xl-2">
+          <select class="selectpicker" id="langSelect">
+            <option value="fr" data-content='Français'>🇫🇷</option>
+            <option value="en-US" data-content='English'>en</option>
+            <option value="de" data-content='German'>de</option>
+            <option value="ar" data-content='عربية'>عر</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

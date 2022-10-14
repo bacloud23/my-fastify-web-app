@@ -1,0 +1,53 @@
+{
+    "name": "my-fastify-web-app-client",
+    "version": "1.0.0",
+    "description": "Not a standalone client. It only generates client scripts and styles that are served publicly",
+    "source": [
+      "src/sockets/setup.js"
+    ],
+    "targets": {
+      "default": {
+        "engines": {
+          "browsers": "> 0.25%"
+        },
+        "distDir": "../public/javascripts/",
+        "publicUrl": ".",
+        "sourceMap": true
+      }
+    },
+    "type": "module",
+    "scripts": {
+      "build": "find ../public/javascripts/ -type f -delete && parcel build && sass src/style:../public/stylesheets",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+      "@tarekraafat/autocomplete.js": "^10.2.7",
+      "@yaireo/tagify": "^4.12.0",
+      "ad-rotator": "^5.6.0",
+      "avatar-initials": "^5.0.0",
+      "bootstrap": "^5.1.3",
+      "detect-inapp": "^1.4.0",
+      "i18next": "^21.8.11",
+      "i18next-browser-languagedetector": "^6.1.4",
+      "i18next-http-backend": "^1.4.1",
+      "leaflet": "^1.8.0",
+      "loc-i18next": "^0.1.4",
+      "loglevel": "^1.8.0",
+      "socket.io-client": "^4.5.1"
+    },
+    "devDependencies": {
+      "@types/web": "0.0.68",
+      "parcel": "^2.6.2",
+      "prettier": "^2.7.1",
+      "process": "^0.11.10",
+      "sass": "^1.53.0",
+      "scss": "^0.2.4"
+    },
+    "keywords": [
+      "javascript",
+      "socket",
+      "vanilla js"
+    ],
+    "author": "A.B. bacloud'14'(at)gmail(dot)com",
+    "license": "MIT"
+  }
